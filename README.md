@@ -23,3 +23,11 @@ As telas devem apresentar apenas as informações necessárias para a tarefa atu
 Cada peça deve permitir o cadastro dos veículos com os quais é compatível. Isso facilita a identificação das peças disponíveis para um determinado conserto e ajuda a verificar quando será necessário encomendar algum componente.
 
 Dessa forma, o mecânico consegue avaliar melhor a disponibilidade de peças antes de iniciar um serviço, reduzindo atrasos e melhorando a organização do trabalho.
+
+## Declaração de uso de IA
+ 
+Utilizei o Claude (Anthropic), modelo Claude Sonnet 5.5, em três momentos do trabalho:
+ 
+- **Revisão de texto e sintaxe:** para checar a redação e a formatação dos textos.
+- **Ideias:** para sugerir funcionalidades, requisitos e regras de negócio, que eu avaliei e escolhi conforme o escopo do sistema.
+- **Verificação de falhas:** para apontar possíveis erros e inconsistências nos artefatos, que eu analisei depois e só corrigi quando concordei com o apontamento.

@@ -24,6 +24,10 @@ Cada peça deve permitir o cadastro dos veículos com os quais é compatível. I
 
 Dessa forma, o mecânico consegue avaliar melhor a disponibilidade de peças antes de iniciar um serviço, reduzindo atrasos e melhorando a organização do trabalho.
 
+## Documentação
+
+Acesse o [índice da documentação](documentation/documentacao.md) para consultar os requisitos e as regras de negócio do projeto.
+
 ## Declaração de uso de IA
  
 Utilizei o Claude (Anthropic), modelo Claude Sonnet 5.5, em três momentos do trabalho:

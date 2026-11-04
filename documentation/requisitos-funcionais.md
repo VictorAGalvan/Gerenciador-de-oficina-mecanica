@@ -1,11 +1,11 @@
 | ID | Requisito funcional |
 |----|---------------------|
 | RF01 | O sistema deve permitir cadastrar, editar, consultar e inativar clientes (nome, CPF, telefone, e-mail). |
-| RF02 | O sistema deve permitir cadastrar, editar e consultar veículos (placa, marca, modelo, ano, cor, quilometragem), vinculando cada veículo a um cliente e listando os veículos de um cliente. |
+| RF02 | O sistema deve permitir cadastrar, editar e consultar modelos de veículo (marca, modelo, ano) e veículos de clientes (modelo, placa, cor, quilometragem), vinculando cada veículo a um cliente e listando os veículos de um cliente. |
 | RF03 | O sistema deve permitir cadastrar, editar e consultar peças (código, nome, categoria, preço, quantidade em estoque, estoque mínimo). |
-| RF04 | O sistema deve permitir vincular uma peça a um ou mais veículos compatíveis (marca, modelo, ano). |
-| RF05 | O sistema deve listar as peças compatíveis ao consultar um veículo. |
-| RF06 | O sistema deve listar os clientes que possuem veículos compatíveis ao consultar uma peça. |
+| RF04 | O sistema deve permitir vincular uma peça a um ou mais modelos de veículo compatíveis. |
+| RF05 | O sistema deve listar as peças compatíveis com o modelo ao consultar um veículo ou um modelo de veículo. |
+| RF06 | O sistema deve listar os clientes que possuem veículos de modelos compatíveis ao consultar uma peça. |
 | RF07 | O sistema deve registrar entradas e saídas de estoque, guardando data, quantidade, motivo e responsável. |
 | RF08 | O sistema deve permitir abrir uma ordem de serviço vinculando cliente, veículo e descrição dos serviços a executar. |
 | RF09 | O sistema deve permitir gerar um orçamento vinculado à ordem de serviço, com serviços e peças. |

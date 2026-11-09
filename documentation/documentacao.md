@@ -31,3 +31,17 @@
 - [UC03_Gerenciar_ordem_de_servico.docx](./docs/UC03_Gerenciar_ordem_de_servico.docx)
 - [UC04_Verificar_estoque.docx](./docs/UC04_Verificar_estoque.docx)
 - [UC05_Aprovar_orcamento.docx](./docs/UC05_Aprovar_orcamento.docx)
+
+## Diagramas de classe
+
+### Modelo conceitual
+
+![Diagrama de classes conceitual](./img/diagrama_classes_conceitual.png)
+
+[Arquivo editável](./diagrams/diagrama_classes_conceitual.drawio)
+
+### Modelo de domínio
+
+![Diagrama de classes de domínio](./img/diagrama_classes_dominio.png)
+
+[Arquivo editável](./diagrams/diagrama_classes_dominio.drawio)

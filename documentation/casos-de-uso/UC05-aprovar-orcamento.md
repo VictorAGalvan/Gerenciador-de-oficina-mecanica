@@ -12,11 +12,8 @@ Mecânico (registra a decisão manualmente, quando necessário)
 ## Resumo
 Permitir que o cliente analise o orçamento enviado por mensagem automática via WhatsApp e responda com aprovação ou recusa, liberando ou não o início dos serviços. Estende o UC03 Gerenciar ordem de serviço.
 
-## Requisitos relacionados
-RF10, RF15 (RN01, RN04, RN07, RN08).
-
 ## Pré-condições
-Existe uma ordem de serviço do cliente com o orçamento gerado e o status "em orçamento", e o cliente tem WhatsApp cadastrado.
+Existe uma ordem de serviço do cliente com o orçamento gerado e o status "aguardando aprovação", e o cliente tem WhatsApp cadastrado.
 
 ## Pós-condições
 Decisão do cliente registrada no orçamento. Se aprovado, a ordem passa para "aprovada", permitindo o início da execução (RN01) e travando novas peças e alterações (RN07). Se recusado, a ordem é cancelada e um novo atendimento exige uma nova ordem de serviço (RN08).
@@ -52,7 +49,7 @@ Decisão do cliente registrada no orçamento. Se aprovado, a ordem passa para "a
 ### FE01
 1. Mensagem não entregue
    1.1 O WhatsApp do cliente é inválido ou a mensagem não é entregue.
-   1.2 O sistema registra a falha de envio, avisa o mecânico e mantém a ordem em "em orçamento".
+   1.2 O sistema registra a falha de envio, avisa o mecânico e mantém a ordem em "aguardando aprovação".
    1.3 O mecânico registra a decisão do cliente manualmente (FA03).
 
 ### FE02

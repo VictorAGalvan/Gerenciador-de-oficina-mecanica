@@ -12,9 +12,6 @@ Mecânico
 ## Resumo
 Cadastrar e manter os dados dos clientes, dos modelos de veículo (marca, modelo e ano, cadastrados uma só vez) e dos veículos de cada cliente (placa, cor e quilometragem), que servem de base para as ordens de serviço e para a compatibilidade com as peças. Também gera relatórios de clientes e veículos.
 
-## Requisitos relacionados
-RF01, RF02, RF18 (RN05, RN06).
-
 ## Pré-condições
 O mecânico acessou o ambiente da oficina.
 

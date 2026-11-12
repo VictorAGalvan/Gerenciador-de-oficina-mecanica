@@ -12,9 +12,6 @@ Mecânico
 ## Resumo
 Manter o cadastro das peças e controlar a quantidade em estoque, registrando entradas e saídas e vinculando cada peça aos modelos de veículo compatíveis, para que o mecânico saiba o que está disponível e o que precisa ser encomendado. Também gera o relatório de estoque.
 
-## Requisitos relacionados
-RF03, RF04, RF05, RF06, RF07, RF18.
-
 ## Pré-condições
 O mecânico acessou o ambiente da oficina.
 Os modelos de veículo compatíveis com a peça estão cadastrados (UC01).

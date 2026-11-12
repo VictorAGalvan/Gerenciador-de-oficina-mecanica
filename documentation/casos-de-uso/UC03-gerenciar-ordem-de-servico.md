@@ -12,9 +12,6 @@ Cliente (decide sobre o orçamento por meio do UC05)
 ## Resumo
 Abrir a ordem de serviço de um veículo, gerar o orçamento com serviços e peças, adicionar as peças usadas dando baixa no estoque (ou encomendando as que faltam) e acompanhar o status da ordem até a entrega do veículo. Também agenda atendimentos, registra a cobrança da ordem e gera relatórios de ordens de serviço. Inclui o UC04 Verificar estoque e é estendido pelo UC05 Aprovar orçamento.
 
-## Requisitos relacionados
-RF08, RF09, RF11, RF12, RF13, RF14, RF16, RF17, RF18 (RN01, RN02, RN03, RN04, RN07, RN08).
-
 ## Pré-condições
 Cliente (ativo) e veículo cadastrados (UC01).
 
@@ -24,13 +21,13 @@ Ordem de serviço registrada, com orçamento, peças e status atualizados; estoq
 ## FLUXO PRINCIPAL
 ### Fluxo principal
 1. O mecânico solicita a abertura de uma ordem de serviço.
-2. O mecânico localiza o veículo e o sistema exibe o veículo, seu modelo e o cliente vinculado.
+2. O mecânico localiza o cliente, por nome ou CPF, e seleciona um dos veículos dele. O sistema exibe o veículo e o seu modelo.
 3. O mecânico descreve os serviços a executar.
 4. O sistema registra a ordem de serviço com o status "aberta".
 5. O mecânico adiciona à ordem as peças necessárias, informando a quantidade de cada uma. As peças só podem ser adicionadas enquanto o orçamento não foi aprovado; se já houver orçamento gerado, é preciso gerar um novo (FA09). (RN07)
 6. O sistema verifica a quantidade em estoque e a compatibilidade da peça com o modelo do veículo. (include UC04)
 7. O sistema registra a peça na ordem, dá baixa no estoque e registra a saída com data, quantidade e motivo. (RN02)
-8. O mecânico informa os valores dos serviços e confere os preços das peças (preenchidos com o preço do cadastro), e o sistema gera o orçamento da ordem, alterando o status para "em orçamento".
+8. O mecânico informa os valores dos serviços e confere os preços das peças (preenchidos com o preço do cadastro), e o sistema gera o orçamento da ordem, alterando o status para "aguardando aprovação".
 9. O cliente analisa o orçamento e informa sua decisão. (extend UC05)
 10. Com a ordem "aprovada" (UC05), o mecânico atualiza o status para "em execução". (RN01)
 11. Concluídos os serviços, o mecânico atualiza o status para "concluída", e as encomendas da ordem passam a ser consideradas concluídas.
@@ -39,8 +36,8 @@ Ordem de serviço registrada, com orçamento, peças e status atualizados; estoq
 
 ## FLUXOS ALTERNATIVOS
 ### FA01
-2. Veículo não cadastrado
-   2.1 O veículo ou o cliente não é localizado.
+2. Cliente ou veículo não localizado
+   2.1 O cliente ou o veículo não é localizado.
    2.2 Executa-se Cadastrar clientes e veículos (UC01) e o fluxo retorna ao passo 2.
 
 ### FA02
@@ -67,7 +64,7 @@ Ordem de serviço registrada, com orçamento, peças e status atualizados; estoq
    1.1 O mecânico localiza a ordem por cliente, veículo ou status.
    1.2 O sistema exibe os dados da ordem e o status atual.
    1.3 O mecânico altera o status para uma das transições permitidas (1.4) e o sistema registra a mudança.
-   1.4 Transições permitidas: aberta → em orçamento, aguardando peça ou cancelada; aguardando peça → aberta ou cancelada; em orçamento → aprovada, cancelada ou aberta (para gerar novo orçamento, FA09); aprovada → em execução; em execução → concluída; concluída → entregue. As ordens "entregue" e "cancelada" não mudam mais. (RF12, RN07)
+   1.4 Transições permitidas: aberta → aguardando aprovação, aguardando peça ou cancelada; aguardando peça → aberta ou cancelada; aguardando aprovação → aprovada, cancelada ou aberta (para gerar novo orçamento, FA09); aprovada → em execução; em execução → concluída; concluída → entregue. As ordens "entregue" e "cancelada" não mudam mais. (RF12, RN07)
 
 ### FA06
 1. Agendar atendimento
@@ -90,7 +87,7 @@ Ordem de serviço registrada, com orçamento, peças e status atualizados; estoq
 
 ### FA09
 5. Adicionar peça com orçamento já gerado (RN07)
-   5.1 A ordem está "em orçamento" e o mecânico precisa adicionar uma peça.
+   5.1 A ordem está "aguardando aprovação" e o mecânico precisa adicionar uma peça.
    5.2 O sistema volta a ordem para "aberta" e o orçamento anterior perde a validade.
    5.3 O fluxo segue no passo 5; ao gerar o novo orçamento (passo 8), ele é enviado ao cliente para nova decisão (UC05).
 

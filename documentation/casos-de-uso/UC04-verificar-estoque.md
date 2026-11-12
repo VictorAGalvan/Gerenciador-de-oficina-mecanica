@@ -12,9 +12,6 @@ Mecânico (por meio do UC03)
 ## Resumo
 Verificar se a peça escolhida para a ordem de serviço tem quantidade suficiente em estoque e se é compatível com o modelo do veículo da ordem, devolvendo o resultado ao caso de uso que o chamou. É incluído pelo UC03 Gerenciar ordem de serviço.
 
-## Requisitos relacionados
-RF04, RF11 (RN02, RN03).
-
 ## Pré-condições
 Existe uma ordem de serviço aberta, com veículo informado, e uma peça selecionada pelo mecânico (UC03).
 

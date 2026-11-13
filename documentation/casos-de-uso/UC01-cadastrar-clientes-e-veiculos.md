@@ -10,7 +10,7 @@ Mecânico
 -
 
 ## Resumo
-Cadastrar e manter os dados dos clientes, dos modelos de veículo (marca, modelo e ano, cadastrados uma só vez) e dos veículos de cada cliente (placa, cor e quilometragem), que servem de base para as ordens de serviço e para a compatibilidade com as peças. Também gera relatórios de clientes e veículos.
+Cadastrar e manter os dados dos clientes, dos modelos de veículo (marca, modelo e ano, cadastrados uma só vez) e dos veículos de cada cliente (placa, cor e quilometragem), que servem de base para as ordens de serviço e para a compatibilidade com as peças.
 
 ## Pré-condições
 O mecânico acessou o ambiente da oficina.
@@ -47,19 +47,9 @@ Cliente e veículo registrados (ou alterados), com o veículo vinculado ao clien
    1.2 Ao selecionar um cliente, o sistema lista os veículos vinculados a ele.
 
 ### FA04
-1. Inativar cliente
-   1.1 O mecânico localiza o cliente e solicita a inativação.
-   1.2 O sistema registra o cliente como inativo.
-
-### FA05
 7. Modelo de veículo não cadastrado
    7.1 O modelo do veículo não existe na lista.
    7.2 O mecânico cadastra o modelo, informando marca, modelo e ano, e o fluxo retorna ao passo 7.
-
-### FA06
-1. Gerar relatório de clientes ou de veículos
-   1.1 O mecânico escolhe o relatório (clientes ou veículos) e informa o filtro, se houver.
-   1.2 O sistema gera o relatório com os registros correspondentes.
 
 ## FLUXOS DE EXCEÇÃO
 ### FE01
@@ -68,7 +58,7 @@ Cliente e veículo registrados (ou alterados), com o veículo vinculado ao clien
    4.2 O sistema informa o problema e retorna ao formulário.
 
 ### FE02
-7. Modelo já cadastrado ou dados inválidos (FA05)
+7. Modelo já cadastrado ou dados inválidos (FA04)
    7.1 Já existe um modelo com a mesma marca, modelo e ano, ou há campo obrigatório não preenchido.
    7.2 O sistema informa o problema e retorna ao cadastro do modelo.
 

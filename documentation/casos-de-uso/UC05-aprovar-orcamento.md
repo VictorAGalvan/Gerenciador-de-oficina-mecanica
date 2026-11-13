@@ -10,7 +10,7 @@ Cliente
 Mecânico (registra a decisão manualmente, quando necessário)
 
 ## Resumo
-Permitir que o cliente analise o orçamento enviado por mensagem automática via WhatsApp e responda com aprovação ou recusa, liberando ou não o início dos serviços. Estende o UC03 Gerenciar ordem de serviço.
+Permitir que o cliente analise o orçamento enviado por mensagem automática via WhatsApp e responda com aprovação ou recusa, liberando ou não o início dos serviços. Estende o UC03 Gerenciar ordem de serviço, no passo 7.
 
 ## Pré-condições
 Existe uma ordem de serviço do cliente com o orçamento gerado e o status "aguardando aprovação", e o cliente tem WhatsApp cadastrado.
@@ -18,19 +18,19 @@ Existe uma ordem de serviço do cliente com o orçamento gerado e o status "agua
 ## Pós-condições
 Decisão do cliente registrada no orçamento. Se aprovado, a ordem passa para "aprovada", permitindo o início da execução (RN01) e travando novas peças e alterações (RN07). Se recusado, a ordem é cancelada e um novo atendimento exige uma nova ordem de serviço (RN08).
 
-## Fluxo principal
+## FLUXO PRINCIPAL
+### Fluxo principal
 1. O sistema envia ao WhatsApp do cliente uma mensagem automática com o orçamento, com os serviços, as peças e o valor total, com a orientação de como aprovar ou recusar. (RN04)
 2. O cliente analisa o orçamento.
 3. O cliente responde à mensagem automática e aprova o orçamento.
 4. O sistema registra a aprovação recebida por WhatsApp e altera o status da ordem para "aprovada". (RN01)
 5. O sistema informa ao cliente, pelo WhatsApp, que o serviço poderá ser iniciado.
 
-## Fluxos alternativos
-
+## FLUXOS ALTERNATIVOS
 ### FA01
 3. Cliente recusa o orçamento
    3.1 O cliente responde à mensagem automática e recusa o orçamento.
-   3.2 O sistema registra a recusa e cancela a ordem, devolvendo ao estoque as peças já baixadas (UC03, FA04). (RN08)
+   3.2 O sistema registra a recusa e cancela a ordem, devolvendo ao estoque as peças já baixadas (UC03, FA02). (RN08)
    3.3 Um novo atendimento exige uma nova ordem de serviço.
 
 ### FA02
@@ -44,8 +44,7 @@ Decisão do cliente registrada no orçamento. Se aprovado, a ordem passa para "a
    3.2 O mecânico localiza o orçamento e registra a aprovação ou a recusa do cliente.
    3.3 O sistema registra a decisão e segue no passo 4 (aprovação) ou no FA01 (recusa). (RN01)
 
-## Fluxos de exceção
-
+## FLUXOS DE EXCEÇÃO
 ### FE01
 1. Mensagem não entregue
    1.1 O WhatsApp do cliente é inválido ou a mensagem não é entregue.

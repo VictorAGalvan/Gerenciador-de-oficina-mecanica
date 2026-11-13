@@ -10,7 +10,7 @@ Mecânico
 -
 
 ## Resumo
-Manter o cadastro das peças e controlar a quantidade em estoque, registrando entradas e saídas e vinculando cada peça aos modelos de veículo compatíveis, para que o mecânico saiba o que está disponível e o que precisa ser encomendado. Também gera o relatório de estoque.
+Manter o cadastro das peças e controlar a quantidade em estoque, registrando entradas e saídas e vinculando cada peça aos modelos de veículo compatíveis, para que o mecânico saiba o que está disponível e o que precisa ser encomendado.
 
 ## Pré-condições
 O mecânico acessou o ambiente da oficina.
@@ -34,7 +34,7 @@ Peça cadastrada ou atualizada, com a quantidade em estoque e os modelos compat�
 1. Registrar entrada de peças
    1.1 O mecânico localiza a peça e informa a quantidade recebida e o motivo (compra ou chegada de encomenda).
    1.2 O sistema soma a quantidade ao estoque e registra a movimentação.
-   1.3 Se houver ordem de serviço aguardando a peça, o mecânico pode retomá-la (UC03).
+   1.3 Se houver ordem de serviço aguardando a peça, o mecânico pode retomá-la (UC06).
 
 ### FA02
 1. Registrar saída de peças
@@ -57,13 +57,8 @@ Peça cadastrada ou atualizada, com a quantidade em estoque e os modelos compat�
    1.2 O sistema lista os clientes que possuem veículos de modelos compatíveis com ela.
 
 ### FA06
-1. Gerar relatório de estoque
-   1.1 O mecânico solicita o relatório de estoque e informa o filtro, se houver (por exemplo, categoria ou peças abaixo do estoque mínimo).
-   1.2 O sistema gera o relatório com as peças e as quantidades em estoque.
-
-### FA07
 1. Aviso de estoque mínimo
-   1.1 Ao registrar uma saída (FA02) ou ao dar baixa por uma ordem de serviço (UC03), o sistema compara a quantidade em estoque com o estoque mínimo da peça.
+   1.1 Ao registrar uma saída (FA02) ou ao dar baixa por uma ordem de serviço (UC06), o sistema compara a quantidade em estoque com o estoque mínimo da peça.
    1.2 Se a quantidade ficar igual ou abaixo do mínimo, o sistema avisa o mecânico para que ele providencie a reposição.
 
 ## FLUXOS DE EXCEÇÃO
@@ -75,4 +70,4 @@ Peça cadastrada ou atualizada, com a quantidade em estoque e os modelos compat�
 ### FE02
 1. Saída maior que o estoque (FA02)
    1.1 A quantidade informada é maior que a disponível.
-   1.2 O sistema recusa a saída e informa a quantidade em estoque.
+   1.2 O sistema recusa a saída e informa a quantidade em estoque.

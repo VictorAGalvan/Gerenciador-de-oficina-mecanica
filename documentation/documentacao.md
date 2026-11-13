@@ -4,9 +4,9 @@
 
 ### Índice
 
-- [Requisitos funcionais](./requisitos-regras/requisitos-funcionais.md)
-- [Requisitos não funcionais](./requisitos-regras/requisitos-nao-funcionais.md)
-- [Regras de negócio](./requisitos-regras/regras-negocio.md)
+- [Requisitos funcionais](./requisitos-funcionais.md)
+- [Requisitos não funcionais](./requisitos-nao-funcionais.md)
+- [Regras de negócio](./regras-negocio.md)
 
 ### Documentos
 
@@ -23,6 +23,7 @@
 - [UC03 – Gerenciar ordem de serviço](./casos-de-uso/UC03-gerenciar-ordem-de-servico.md)
 - [UC04 – Verificar estoque](./casos-de-uso/UC04-verificar-estoque.md)
 - [UC05 – Aprovar orçamento](./casos-de-uso/UC05-aprovar-orcamento.md)
+- [UC06 – Adicionar peças à ordem](./casos-de-uso/UC06-adicionar-pecas-a-ordem.md)
 
 ### Documentos
 
@@ -31,17 +32,4 @@
 - [UC03_Gerenciar_ordem_de_servico.docx](./docs/UC03_Gerenciar_ordem_de_servico.docx)
 - [UC04_Verificar_estoque.docx](./docs/UC04_Verificar_estoque.docx)
 - [UC05_Aprovar_orcamento.docx](./docs/UC05_Aprovar_orcamento.docx)
-
-## Diagramas de classe
-
-### Modelo conceitual
-
-![Diagrama de classes conceitual](./img/diagrama_classes_conceitual.png)
-
-[Arquivo editável](./diagrams/diagrama_classes_conceitual.drawio)
-
-### Modelo de domínio
-
-![Diagrama de classes de domínio](./img/diagrama_classes_dominio.png)
-
-[Arquivo editável](./diagrams/diagrama_classes_dominio.drawio)
+- [UC06_Adicionar_pecas_a_ordem.docx](./docs/UC06_Adicionar_pecas_a_ordem.docx)

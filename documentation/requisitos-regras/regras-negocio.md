@@ -1,10 +1,10 @@
 | ID | Regra de negócio | Relacionada a |
 |----|------------------|---------------|
 | RN01 | O serviço só pode ser iniciado depois que o cliente aceitar o orçamento pelo WhatsApp (ou o mecânico registrar a aprovação manualmente), e a ordem só pode passar para "em execução" após essa aprovação. | RF09, RF10, RF12 |
-| RN02 | A baixa no estoque ocorre quando a peça é adicionada à ordem e só é permitida se houver quantidade suficiente. Sem estoque, deve ser possível registrar uma encomenda, e a ordem fica "aguardando peça" até sua chegada. Se a ordem for cancelada, as peças baixadas retornam ao estoque. | RF03, RF07, RF11, RF12 |
+| RN02 | A baixa no estoque ocorre quando a peça é adicionada à ordem e só é permitida se houver quantidade suficiente. Sem estoque, deve ser possível registrar uma encomenda, e a ordem fica "aguardando peça" até sua chegada; a ordem só pode passar para "em execução" depois que as peças encomendadas chegarem. Se a ordem for cancelada, as peças baixadas retornam ao estoque. | RF03, RF07, RF11, RF12 |
 | RN03 | Ao adicionar uma peça incompatível com o modelo do veículo, o sistema deve avisar, mas a decisão final é do mecânico. | RF04, RF11 |
-| RN04 | As notificações de uma ordem de serviço e de suas cobranças são enviadas apenas ao WhatsApp do cliente dono da ordem. | RF10, RF16, RF17 |
+| RN04 | As mensagens de uma ordem de serviço, como o orçamento e o pedido de aprovação, são enviadas apenas ao WhatsApp do cliente dono da ordem. | RF10 |
 | RN05 | O CPF do cliente deve ser único no sistema, não pode haver dois clientes com o mesmo número. | RF01 |
 | RN06 | A placa do veículo deve ser única no sistema, não pode haver dois veículos cadastrados com a mesma placa. | RF02 |
-| RN07 | Depois que o orçamento é aprovado, a ordem não pode ser cancelada nem receber novas peças ou alterações de valores; um acréscimo exige uma nova ordem de serviço. O cancelamento só é possível antes da aprovação. | RF10, RF11, RF12 |
+| RN07 | Depois que o orçamento é aprovado, a ordem não pode ser cancelada nem receber novas peças ou alterações de valores; um acréscimo exige uma nova ordem de serviço. O cancelamento só é possível antes da aprovação. | RF09, RF10, RF11, RF12 |
 | RN08 | Se o cliente recusar o orçamento, a ordem é cancelada e um novo atendimento exige uma nova ordem de serviço. | RF10, RF12 |
